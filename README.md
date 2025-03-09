@@ -17,35 +17,35 @@
 - 依赖库：
   ```bash
   pip install PySide6 pandas
-
+  ```
 ## 安装使用
 
 ### 克隆仓库：
 
-bash
-<git clone https://github.com/yourusername/SQM数据分析工具.git>
-
+```bash
+git clone https://github.com/SQM-fuleiya/SQM-Data-analysis-tools.git
+```
 ### 安装依赖：
 
-bash
+```bash
 pip install -r requirements.txt
-
+```
 ### 运行主程序：
 
-bash
+```bash
 python main.py
+```
 
 ## 项目结构
-
+```bash
 plainText
 .
 ├── main.py              # 主程序入口
 ├── main_ui.py           # Qt界面定义
 ├── db_fun.py            # 数据库操作模块
 ├── file_fun.py          # 文件处理模块
-├── build/               # 构建目录
 └── dist/main.exe        # 打包生成的可执行文件
-
+```
 ## 使用说明
 
 ### 文件导入：
@@ -56,6 +56,8 @@ plainText
 
 plainText
 姓名----id----上线姓名----上线id
+
+xlsx
 
 ## 功能按钮：
 
