@@ -23,7 +23,7 @@
 ### 克隆仓库：
 
 bash
-<git clone https://github.com/yourusername/SQM数据分析工具.git>
+git clone https://github.com/SQM-fuleiya/SQM-Data-analysis-tools.git
 
 ### 安装依赖：
 
@@ -56,6 +56,8 @@ plainText
 
 plainText
 姓名----id----上线姓名----上线id
+
+xlsx
 
 ## 功能按钮：
 
