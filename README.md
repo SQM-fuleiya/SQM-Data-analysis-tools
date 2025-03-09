@@ -22,9 +22,15 @@
 
 ### 克隆仓库：
 
+<<<<<<< HEAD
 ```bash
 git clone https://github.com/SQM-fuleiya/SQM-Data-analysis-tools.git
 ```
+=======
+bash
+git clone https://github.com/SQM-fuleiya/SQM-Data-analysis-tools.git
+
+>>>>>>> 13d1f455d099d5abc6be944e702764ef399e163d
 ### 安装依赖：
 
 ```bash
