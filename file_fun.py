@@ -1,8 +1,10 @@
+import chardet
 import pandas as pd
 from PySide6.QtGui import QStandardItem
 from PySide6.QtWidgets import QMessageBox
 
 import db_fun
+
 
 file_name = []
 file_path = ""
@@ -56,7 +58,13 @@ def 处理txt文件(self, file_path):  # 处理txt文件
     batch_size = 1000  # 建立缓存池
     batch_data = []
 
-    with open(file_path, "r", encoding="utf-8") as f:
+    # 检测文件编码
+    with open(file_path, "rb") as f:
+        raw_data = f.read()
+        result = chardet.detect(raw_data)
+        encoding = result["encoding"]
+
+    with open(file_path, "r", encoding=encoding) as f:
         f.seek(0)
 
         for line_idx, line in enumerate(f, 1):
@@ -70,8 +78,9 @@ def 处理txt文件(self, file_path):  # 处理txt文件
                 db_fun.批量入库(self, batch_data)
                 batch_data = []
 
-        if batch_data and self.is_running:
-            db_fun.批量入库(self, batch_data)
+    # 处理剩余的数据
+    if batch_data and self.is_running:
+        db_fun.批量入库(self, batch_data)
 
 
 def 处理表格文件(self, file_path):
